@@ -95,3 +95,5 @@ def find_tag(request, tags_name):
         movies = Movie.objects.filter(tags__in=[tags])
         serializer = MovieSerializer(movies, many=True)
         return Response(data=serializer.data)
+
+    #테스트
